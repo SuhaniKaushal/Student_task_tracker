@@ -1,0 +1,193 @@
+/* dashboard.css */
+
+/* dashboard.css - Cleaned and Enhanced */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111827;
+  color: #f9fafb;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1f2937;
+  padding: 30px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.sidebar h2 {
+  color: #ffb400;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #374151;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #4b5563;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  padding-left: 260px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+input, select {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+button {
+  background-color: #ffb400;
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffd35c;
+}
+
+#taskList, #planList, #recentTaskList {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li, #recentTaskList li, #planList div {
+  background: #374151;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.task-actions input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.task-actions button {
+  background-color: crimson;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: none;
+}
+
+.clock {
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: 600;
+  color: #ffb400;
+}
+
+.recent-tasks h2 {
+  margin-top: 30px;
+}
+
+/* Profile Styling */
+#profile {
+  display: none;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#profile.section.active {
+  display: flex;
+}
+
+#profile input, #profile button {
+  margin-bottom: 15px;
+}
+
+#profile h1 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  color: #facc15;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    padding: 20px;
+    padding-left: 20px;
+  }
+  input, select, button {
+    font-size: 16px;
+  }
+}

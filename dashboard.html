@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Student Task Tracker</title>
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>📘 Tracker</h2>
+      <ul>
+        <li onclick="showSection('overview')">Home</li>
+        <li onclick="showSection('tasks')">Tasks</li>
+        <li onclick="showSection('planner')">Planner</li>
+        <li onclick="showSection('profile')">Profile</li>
+        <li onclick="logout()">Logout</li>
+        
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section id="overview" class="section active">
+        <h1>Welcome Back 👋</h1>
+        <p>This is your personal productivity dashboard. Track tasks, plan your week, and manage your goals in one place.</p>
+        <div class="clock" id="clock"></div>
+        <div class="recent-tasks">
+          <h2>🕒 Recent Tasks</h2>
+          <ul id="recentTaskList"></ul>
+        </div>
+      </section>
+
+      <section id="tasks" class="section">
+        <h1>📌 Tasks</h1>
+        <input type="text" id="taskInput" placeholder="Add a task..." />
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+      </section>
+
+      <section id="planner" class="section">
+        <h1>🗓 Weekly Planner</h1>
+        <input type="text" id="planTitle" placeholder="Plan title..." />
+        <input type="date" id="planDate" />
+        <select id="planPriority">
+          <option disabled selected>Priority</option>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+        <button onclick="addPlan()">Add Plan</button>
+        <div id="planList"></div>
+      </section>
+
+      <section id="profile" class="section">
+  <h1>👤 <span style="color: #facc15;">Profile</span></h1>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <input type="password" placeholder="New Password">
+  <input type="text" placeholder="Preferred Language">
+  <button>Save Changes</button>
+</section>
+
+    </main>
+  </div>
+
+ 
+
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
+

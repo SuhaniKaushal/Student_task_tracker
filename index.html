@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Student Task Tracker</title>
+  <link rel="stylesheet" href="assets/css/auth.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="auth-container">
+    <div class="form-wrapper">
+      <div class="form-box" id="login-box">
+        <h2>Welcome Back 👋</h2>
+        <p class="subtitle">Login to your account</p>
+        <input type="email" id="login-email" placeholder="Email" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button onclick="login()">Sign In</button>
+        <p class="switch">Don't have an account? <span onclick="switchToSignup()">Sign Up</span></p>
+      </div>
+
+      <div class="form-box hidden" id="signup-box">
+        <h2>Join Us Today 🚀</h2>
+        <p class="subtitle">Create your free account</p>
+        <input type="text" id="signup-name" placeholder="Full Name" />
+        <input type="email" id="signup-email" placeholder="Email" />
+        <input type="password" id="signup-password" placeholder="Password" />
+        <button onclick="signup()">Sign Up</button>
+        <p class="switch">Already have an account? <span onclick="switchToLogin()">Sign In</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+
+</html>
