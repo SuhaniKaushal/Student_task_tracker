@@ -9,6 +9,8 @@ A tech-themed task tracking app for students with sign in, sign up, assignments,
 - Dark Mode toggle
 - Tech-themed UI with animations
 
+## Live Demo-  https://suhanikaushal.github.io/Student_task_tracker/
+
 ## Tech Stack
 - HTML5, CSS3, JavaScript (no backend)
 
